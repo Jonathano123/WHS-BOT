@@ -1,24 +1,23 @@
-FROM python:3.12-bookworm
+FROM eclipse-temurin:21-jre
 
+ENV DEBIAN_FRONTEND=noninteractive
 ENV PYTHONUNBUFFERED=1
-ENV PYTHONDONTWRITEBYTECODE=1
+ENV PIP_NO_CACHE_DIR=1
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        openjdk-21-jre-headless \
+        python3 \
+        python3-pip \
         curl \
         ca-certificates \
+        bash \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 
-# Lavalink 4.2.2
-RUN curl -fsSL \
-    https://github.com/lavalink-devs/Lavalink/releases/download/4.2.2/Lavalink.jar \
-    -o /app/Lavalink.jar
+RUN pip3 install --break-system-packages -r requirements.txt
 
 COPY . .
 
