@@ -1,0 +1,102 @@
+[
+  {
+    "word": "Apfel",
+    "taboo": [
+      "Obst",
+      "rot",
+      "essen",
+      "Baum",
+      "Saft"
+    ]
+  },
+  {
+    "word": "Fußball",
+    "taboo": [
+      "Sport",
+      "Ball",
+      "Tor",
+      "Spieler",
+      "Rasen"
+    ]
+  },
+  {
+    "word": "Schule",
+    "taboo": [
+      "Lehrer",
+      "Unterricht",
+      "Klasse",
+      "Schüler",
+      "Hausaufgaben"
+    ]
+  },
+  {
+    "word": "Pizza",
+    "taboo": [
+      "Italien",
+      "Käse",
+      "Teig",
+      "Tomate",
+      "essen"
+    ]
+  },
+  {
+    "word": "Sommer",
+    "taboo": [
+      "warm",
+      "Sonne",
+      "Juni",
+      "Juli",
+      "August"
+    ]
+  },
+  {
+    "word": "Computer",
+    "taboo": [
+      "PC",
+      "Tastatur",
+      "Maus",
+      "Monitor",
+      "Internet"
+    ]
+  },
+  {
+    "word": "Kino",
+    "taboo": [
+      "Film",
+      "Leinwand",
+      "Popcorn",
+      "Saal",
+      "Schauspieler"
+    ]
+  },
+  {
+    "word": "Fahrrad",
+    "taboo": [
+      "Rad",
+      "fahren",
+      "Pedal",
+      "Lenker",
+      "Helm"
+    ]
+  },
+  {
+    "word": "Schnee",
+    "taboo": [
+      "Winter",
+      "weiß",
+      "kalt",
+      "Eis",
+      "fallen"
+    ]
+  },
+  {
+    "word": "Bibliothek",
+    "taboo": [
+      "Bücher",
+      "lesen",
+      "Regal",
+      "Bibliothekar",
+      "Gebäude"
+    ]
+  }
+]
