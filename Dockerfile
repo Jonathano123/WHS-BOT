@@ -6,7 +6,8 @@ ENV PIP_NO_CACHE_DIR=1
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        python3 \
+        python3.13 \
+        python3.13-venv \
         python3-pip \
         curl \
         ca-certificates \
@@ -17,7 +18,9 @@ WORKDIR /app
 
 COPY requirements.txt .
 
-RUN pip3 install --break-system-packages -r requirements.txt
+RUN python3.13 -m venv /opt/venv \
+    && /opt/venv/bin/pip install --upgrade pip \
+    && /opt/venv/bin/pip install -r requirements.txt
 
 COPY . .
 
