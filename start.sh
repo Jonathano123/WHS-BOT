@@ -18,7 +18,9 @@ fi
 
 echo "Starte Lavalink..."
 
-java -jar /app/Lavalink.jar > /app/lavalink.log 2>&1 &
+java -jar /app/Lavalink.jar \
+    --spring.config.additional-location=/app/lavalink/application.yml \
+    > /app/lavalink.log 2>&1 &
 LAVALINK_PID=$!
 
 cleanup() {
