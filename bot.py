@@ -6,16 +6,14 @@ import wavelink
 from discord.ext import commands
 from dotenv import load_dotenv
 
-
 load_dotenv()
 
 TOKEN = os.getenv("TOKEN")
 
 if not TOKEN:
     raise RuntimeError(
-        "Die Umgebungsvariable DISCORD_TOKEN wurde nicht gefunden."
+        "Die Umgebungsvariable TOKEN wurde nicht gefunden."
     )
-
 
 logging.basicConfig(
     level=logging.INFO,
@@ -26,6 +24,7 @@ logger = logging.getLogger("discord-bot")
 
 
 class MusicBot(commands.Bot):
+
     def __init__(self):
         intents = discord.Intents.default()
 
@@ -50,7 +49,11 @@ class MusicBot(commands.Bot):
         logger.info("Lavalink-Verbindung hergestellt.")
 
         synced = await self.tree.sync()
-        logger.info("%s Slash Commands synchronisiert.", len(synced))
+
+        logger.info(
+            "%s Slash Commands synchronisiert.",
+            len(synced),
+        )
 
     async def on_ready(self):
         logger.info(
@@ -68,6 +71,7 @@ bot = MusicBot()
     description="Testet, ob der Bot online ist.",
 )
 async def ping(interaction: discord.Interaction):
+
     await interaction.response.send_message(
         "🏓 Pong! Der Bot läuft."
     )
