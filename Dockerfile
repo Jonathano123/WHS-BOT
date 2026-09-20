@@ -1,4 +1,4 @@
-FROM python:3.13-slim-bookworm
+FROM eclipse-temurin:21-jdk-jammy
 
 ENV PYTHONUNBUFFERED=1
 ENV PIP_NO_CACHE_DIR=1
@@ -6,7 +6,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        openjdk-21-jre \
+        python3 \
+        python3-pip \
+        python3-venv \
         curl \
         ca-certificates \
         bash \
@@ -16,8 +18,8 @@ WORKDIR /app
 
 COPY requirements.txt .
 
-RUN pip install --upgrade pip \
-    && pip install -r requirements.txt
+RUN python3 -m pip install --upgrade pip --break-system-packages \
+    && python3 -m pip install --break-system-packages -r requirements.txt
 
 COPY . .
 
