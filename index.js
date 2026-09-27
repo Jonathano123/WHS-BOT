@@ -19,7 +19,7 @@ const {
 const fs = require("fs");
 const path = require("path");
 
-const imposterGame = require("./imposter/imposterGame");
+const imposterGame = require("./imposterGame");
 
 // =====================================================
 // BOT DATEN
