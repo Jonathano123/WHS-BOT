@@ -1,0 +1,13 @@
+{
+  "name": "discord-quiz-bot",
+  "version": "1.0.0",
+  "description": "Discord Quiz Bot mit Buttons und vier Spielen",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@discordjs/voice": "^0.18.0",
+    "discord.js": "^14.16.3"
+  }
+}
